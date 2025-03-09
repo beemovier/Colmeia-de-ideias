@@ -1,37 +1,42 @@
 h1 {
     text-align: center;
+    font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: yellow;
+   /*color: #D9EBEF;*/
+   color:#00A47C;
+    border-radius: 5px;
 }
 
 html {
-    background-color: yellow;
+    background-color: #fea828af;
 }
 
 p {
-    background-color: blue;
+    background-color: #D9EBEF;
     padding-left: 4px;
     padding-bottom: 4px;
-    color: white;
+   border-radius: 5px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 7px;
     font-size: 22px;
+    color:#5f6f93;
 }
 
 #container {
-    background-color: #E8EEC5;
+    background-color: #82D2DC;
     width: 700px;
     margin: 30px auto;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 #meuBotao {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, bold;
-    padding: 20px;
-    font-size: 15px;
-    background-color: #e8eec5;
-    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*padding: 20px;*/
+    font-size: 20px;
+    background-color:  #82D2DC;
+   color: #00A47C;
+  
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -42,5 +47,6 @@ p {
 }
 
 #meuBotao:hover {
-    background-color: #0056b3;
+    color: #80B4B1;
+background-color: #00A47C;
 }
