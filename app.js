@@ -1,7 +1,7 @@
 // Selecionando elementos
-const atraso1 = 3000;
-const atraso2 = 4000;
-const atraso3 = 5000;
+const atraso1 = 4000;
+const atraso2 = 2000;
+
 let mensagemElemento = document.getElementById("mensagem");
 let botao = document.getElementById("meuBotao");
 
@@ -9,6 +9,8 @@ let botao = document.getElementById("meuBotao");
 if (mensagemElemento && botao) {
   // Função para mudar a mensagem com atraso
   function mudarMensagem() {
+    botao.style.display = "none"; // Oculta o botão
+
     mensagemElemento.textContent = "A vida não precisa ser chata. Desafie-se!";
 
     // Usando setTimeout para criar um atraso de 3 segundos
@@ -17,10 +19,25 @@ if (mensagemElemento && botao) {
       setTimeout(function () {
         mensagemElemento.textContent = "Dê o melhor de sí";
         setTimeout(function () {
-          mensagemElemento.textContent = "Não seja como eu";
-        }, atraso3); // Correção: atraso3
-      }, atraso2); // Correção: atraso2
-    }, atraso1); // Correção: atraso1
+          mensagemElemento.textContent = "Não seja como eu!";
+          setTimeout(function (){
+            let mensagemParcial = "Não seja uma imitação, mas sim...";
+            let mensagemColorida = document.createElement("span");
+            mensagemColorida.textContent = " a sua melhor versão!";
+            mensagemColorida.style.color = "red";
+            mensagemElemento.textContent = mensagemParcial;
+            mensagemElemento.appendChild(mensagemColorida);
+
+            // Reiniciando após 4 segundos
+            setTimeout(function() {
+              mensagemElemento.textContent = "Clique no botão abaixo para mudar a mensagem.";
+              mensagemElemento.style.color = ""; // Removendo a cor
+              botao.style.display = "block"; // Exibe o botão novamente
+            }, atraso1);
+          }, atraso1);
+        }, atraso1);
+      }, atraso1);
+    }, atraso2);
   }
 
   // Adicionando evento de clique ao botão
