@@ -1,47 +1,33 @@
-// Selecionando elementos
-const atraso1 = 4000;
-const atraso2 = 3000;
+//interatividade
+//Separação de interesses
+'use strict'
+alert('HELLO WORLD');
+alert('QUER CAFÉ?');
+alert('TA COM FOME?');
+alert('QUEM NÃO TÁ?');
 
-let mensagemElemento = document.getElementById("mensagem");
-let botao = document.getElementById("meuBotao");
+//isso vai impedir que o script rode antes de carregar o botão
+document.addEventListener('DOMContentLoaded', function () {
 
-// Verificando se os elementos foram encontrados
-if (mensagemElemento && botao) {
-  // Função para mudar a mensagem com atraso
-  function mudarMensagem() {
-    mensagemElemento.textContent = "A vida não precisa ser chata. Desafie-se!";
-   botao.style.display = "none"; // Oculta o botão
-    // Usando setTimeout para criar um atraso de 3 segundos
-    setTimeout(function () {
-      mensagemElemento.textContent = "Tudo melhora quando tentamos ser melhores do que nós mesmos.";
-      setTimeout(function () {
-        mensagemElemento.textContent = "Dê o melhor de sí, o caminho fácil sempre tem fila";
-        setTimeout(function () {
-          mensagemElemento.textContent = "Não tente ser melhor que ninguém. Se inspire!";
-          setTimeout(function () {
-            let mensagemParcial = "Longe de ser uma imitação, mas sim: ";
-            let mensagemColorida = document.createElement("span");
-            mensagemElemento.textContent = mensagemParcial;
-            mensagemElemento.appendChild(mensagemColorida);
-            setTimeout(function () {
-              mensagemColorida.textContent = "Polindo a sua melhor versão!";
-              mensagemColorida.style.color = "#0056b3";
-              setTimeout(function () {
-                mensagemElemento.textContent = "Clique no botão abaixo para mudar a mensagem.";
-                mensagemElemento.style.color = ""; // Removendo a cor
-                botao.style.display = "block"; // Exibe o botão novamente
-              }, atraso2);
-            }, atraso2);
-          }, atraso1);
-        }, atraso1);
-      }, atraso1);
-    }, atraso1);
-  }
+    //parte botão
+    const switcher = document.querySelector('.btn');
+    switcher.addEventListener('click', function () {
 
+        //Adciona a lasse 'light-theme' ao body inicialmente
+        document.body.classList.add('light-theme');
 
+        //alterna entre os temas
+        document.body.classList.toggle('dark-theme');
+        // document.body.classList.toggle('light-theme');
 
-  // Adicionando evento de clique ao botão
-  botao.addEventListener("click", mudarMensagem);
-} else {
-  console.error("Elementos 'mensagem' ou 'meuBotao' não encontrados!");
-}
+        var className = document.body.className;
+        if (className == "light-theme") {
+            this.textContent = "Dark";
+        }
+        else { this.textContent = "Light"; }
+        console.log('current class name: ' + className);
+    });
+    //javascript costumamos usar letras concatenadas para nomes de variáveis com mais de uma palavra className
+});
+//trocar repo: git remot set-url origin https...
+//novo repo: git remote add origin https...
