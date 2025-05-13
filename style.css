@@ -2,7 +2,7 @@ h1 {
     text-align: center;
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   color:#00A47C;
+    color: #00A47C;
     border-radius: 5px;
 }
 
@@ -12,43 +12,53 @@ html {
 
 p {
     background-color: #D9EBEF;
-   padding: 7px 7px 4px 4px;
-/* Ordem: topo, direita, baixo, esquerda */
+    padding: 7px 7px 4px 4px;
+    /* Ordem: topo, direita, baixo, esquerda */
 
-   border-radius: 5px;
+    border-radius: 5px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   
+    cursor: not-allowed;
     font-size: 22px;
-    color:#5f6f93;
+    color: #5f6f93;
+    user-select: none; /*impede o usuario de interagir com o texto*/
+   
 }
 
 #container {
     background-color: #82D2DC;
-    width: 700px; /*LARGURA*/
-    min-width: 300px; /* A largura mínima será 300px */
-    max-width: 800px; /* A largura máxima será 800px */
+    width: 700px;
+    /*LARGURA*/
+    min-width: 300px;
+    /* A largura mínima será 300px */
+    max-width: 800px;
+    /* A largura máxima será 800px */
     margin: 30px auto;
-    padding: 20px; /*espaço interno*/
+    padding: 20px;
+    /*espaço interno*/
     border-radius: 20px;
 }
 
 #meuBotao {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    background-color:  #82D2DC;
-   color: #00A47C;
-  
+    background-color: #82D2DC;
+    color: #00A47C;
+
     border: none;
     border-radius: 10px;
-    cursor: pointer;/**/
-    display: block; /*dysplay é como o elemento é mostrado na página. block: Ocupa toda a largura disponível, força \n.
+    cursor: pointer;
+    /**/
+    display: block;
+    /*dysplay é como o elemento é mostrado na página. block: Ocupa toda a largura disponível, força \n.
     margin: 30px auto; /* Centraliza horizontalmente */
-    height: 45px; /*ALTURA, automatica vai conforme o que tem dentro. Usando vh vai de acordo com tamanho da tela*/
-    width: 200px; /* defina uma largura fixa */
+    height: 45px;
+    /*ALTURA, automatica vai conforme o que tem dentro. Usando vh vai de acordo com tamanho da tela*/
+    width: 200px;
+    /* defina uma largura fixa */
 }
 
 #meuBotao:hover {
     color: #80B4B1;
-background-color: #00A47C;
+    background-color: #00A47C;
     cursor: pointer;
 }
