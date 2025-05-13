@@ -7,19 +7,20 @@ if (mensagemElemento && botao) {
   // Função para mudar a mensagem com atraso
   function mudarMensagem() {
     mensagemElemento.textContent = "A vida não precisa ser chata. Desafie-se!";
-    botao.style.display = "none"; // Oculta o botão
-    // Usando setTimeout para criar um atraso de 3 segundos
+    botao.style.display = "none"; //Some com o botao
+    
+    // Usando setTimeout para criar atraso entre as mensagens
     setTimeout(function () {
       mensagemElemento.textContent = "Tudo melhora quando tentamos ser melhores do que nós mesmos.";
       setTimeout(function () {
-        mensagemElemento.textContent = "Dê o melhor de sí, o caminho fácil sempre tem fila";
+        mensagemElemento.textContent = "Comece pelo difícil, o caminho fácil sempre tem fila";
         setTimeout(function () {
-          mensagemElemento.textContent = "Não tente ser melhor que ninguém. Se inspire!";
+          mensagemElemento.textContent = "Antes de tentar ser o melhor, se inspire nos melhores!";
           setTimeout(function () {
             let mensagemParcial = "Longe de ser uma imitação, mas sim: ";
             let mensagemColorida = document.createElement("span");
             mensagemElemento.textContent = mensagemParcial;
-            mensagemElemento.appendChild(mensagemColorida);
+            mensagemElemento.appendChild(mensagemColorida);//appendChild anexa elemento span a mensagem elemento
             setTimeout(function () {
               mensagemColorida.textContent = "Polindo a sua melhor versão!";
               mensagemColorida.style.color = "#0056b3";
