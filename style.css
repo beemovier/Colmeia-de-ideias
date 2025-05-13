@@ -2,47 +2,48 @@ h1 {
     text-align: center;
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   /*color: #D9EBEF;*/
    color:#00A47C;
     border-radius: 5px;
 }
 
 html {
-    background-color: #fea828af;
+    background-color: #fea2af;
 }
 
 p {
     background-color: #D9EBEF;
-    padding-left: 4px;
-    padding-bottom: 4px;
+   padding: 7px 7px 4px 4px;
+/* Ordem: topo, direita, baixo, esquerda */
+
    border-radius: 5px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 7px;
+   
     font-size: 22px;
     color:#5f6f93;
 }
 
 #container {
     background-color: #82D2DC;
-    width: 700px;
+    width: 700px; /*LARGURA*/
+    min-width: 300px; /* A largura mínima será 300px */
+    max-width: 800px; /* A largura máxima será 800px */
     margin: 30px auto;
-    padding: 20px;
+    padding: 20px; /*espaço interno*/
     border-radius: 20px;
 }
 
 #meuBotao {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /*padding: 20px;*/
     font-size: 20px;
     background-color:  #82D2DC;
    color: #00A47C;
   
     border: none;
     border-radius: 10px;
-    cursor: pointer;
-    display: block; /* Torna o botão um elemento de bloco */
+    cursor: pointer;/**/
+    display: block; /*dysplay é como o elemento é mostrado na página. block: Ocupa toda a largura disponível, força \n.
     margin: 30px auto; /* Centraliza horizontalmente */
-    height: 45px;
+    height: 45px; /*ALTURA, automatica vai conforme o que tem dentro. Usando vh vai de acordo com tamanho da tela*/
     width: 200px; /* defina uma largura fixa */
 }
 
