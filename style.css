@@ -50,4 +50,5 @@ p {
 #meuBotao:hover {
     color: #80B4B1;
 background-color: #00A47C;
+    cursor: pointer;
 }
